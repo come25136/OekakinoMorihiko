@@ -36,13 +36,12 @@ $('#size').on('input change', function () {
 });
 
 //color処理
-var colorInput = document.getElementById("color");
-colorInput.addEventListener("input", onInputColor, false);
-
-function onInputColor() {
-    color = colorInput.value;
-}
-onInputColor();
+$('#colorpickerHolder').ColorPicker({
+    flat: true,
+    onChange: function (hsb, hex, rgb) {
+        color = '#' + hex;
+    }
+});
 
 // alpha処理
 var range = $("#alpha");
