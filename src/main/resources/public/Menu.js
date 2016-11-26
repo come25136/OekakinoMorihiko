@@ -38,6 +38,7 @@ $('#size').on('input change', function () {
 //color処理
 $('#colorpickerHolder').ColorPicker({
     flat: true,
+    color: color,
     onChange: function (hsb, hex, rgb) {
         color = '#' + hex;
     }
